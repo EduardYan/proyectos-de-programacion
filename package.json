@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "@fontsource/geist-sans": "^5.0.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }

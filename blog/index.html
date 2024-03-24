@@ -1,59 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi blog</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <main>
-    <h1 id="title">Mi blog</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <section>
-      <aside>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, neque?</p>
-      </aside>
-      <div class="posts">
-        <article>
-          <div class="glows"></div>
-          <h2>¿Quién soy?</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, repellat! Assumenda laudantium inventore dolorum. Modi asperiores corporis ab labore quo, nisi at omnis unde repudiandae. Reiciendis excepturi minima iure, laborum tenetur iusto dolore rerum in fugit deleniti voluptatibus dolor illum fugiat! Rerum, odit expedita optio a possimus molestias magni autem.</p>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Mi blog</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mi Blog 🛒</h1>
+      <nav>
+        <ul>
+          <li><a href="#electronica">Electrónica</a></li>
+          <li><a href="#ropa">Ropa</a></li>
+          <li><a href="#zapatos">Zapatos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="blog-posts" id="electronica">
+        <article class="post">
+          <img
+            src="https://johnlewis.scene7.com/is/image/JohnLewis/Laptops-940x700-130423"
+            alt="laptop imagen"
+          />
+          <h2>Laptop</h2>
+          <p>
+            Potencia y portabilidad se unen en nuestras laptops. Descubre la
+            libertad de trabajar, estudiar y entretenerse en cualquier lugar con
+            estilo y rendimiento incomparables.
+          </p>
+          <button>Comprar</button>
         </article>
-        <article>
-          <div class="glows"></div>
-          <span class="header">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M17.303 5.197A7.5 7.5 0 006.697 15.803a.75.75 0 01-1.061 1.061A9 9 0 1121 10.5a.75.75 0 01-1.5 0c0-1.92-.732-3.839-2.197-5.303zm-2.121 2.121a4.5 4.5 0 00-6.364 6.364.75.75 0 11-1.06 1.06A6 6 0 1118 10.5a.75.75 0 01-1.5 0c0-1.153-.44-2.303-1.318-3.182zm-3.634 1.314a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68z" clip-rule="evenodd" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M17.303 5.197A7.5 7.5 0 006.697 15.803a.75.75 0 01-1.061 1.061A9 9 0 1121 10.5a.75.75 0 01-1.5 0c0-1.92-.732-3.839-2.197-5.303zm-2.121 2.121a4.5 4.5 0 00-6.364 6.364.75.75 0 11-1.06 1.06A6 6 0 1118 10.5a.75.75 0 01-1.5 0c0-1.153-.44-2.303-1.318-3.182zm-3.634 1.314a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68z" clip-rule="evenodd" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M17.303 5.197A7.5 7.5 0 006.697 15.803a.75.75 0 01-1.061 1.061A9 9 0 1121 10.5a.75.75 0 01-1.5 0c0-1.92-.732-3.839-2.197-5.303zm-2.121 2.121a4.5 4.5 0 00-6.364 6.364.75.75 0 11-1.06 1.06A6 6 0 1118 10.5a.75.75 0 01-1.5 0c0-1.153-.44-2.303-1.318-3.182zm-3.634 1.314a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68z" clip-rule="evenodd" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M17.303 5.197A7.5 7.5 0 006.697 15.803a.75.75 0 01-1.061 1.061A9 9 0 1121 10.5a.75.75 0 01-1.5 0c0-1.92-.732-3.839-2.197-5.303zm-2.121 2.121a4.5 4.5 0 00-6.364 6.364.75.75 0 11-1.06 1.06A6 6 0 1118 10.5a.75.75 0 01-1.5 0c0-1.153-.44-2.303-1.318-3.182zm-3.634 1.314a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68z" clip-rule="evenodd" />
-            </svg>
-          </span>
-          <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
-            </svg>
-            <span>Pointer tracking glows</span>
-          </span>
-          <h2>Activate by,<br>getting closer</h2>
-          <a href="">Learn more</a>
+
+        <article class="post">
+          <img
+            src="https://p4-ofp.static.pub/fes/cms/2023/03/28/7dch8vg9lz0tzeg74u3x9paoln4o8z319478.png"
+            alt="tablet imagen"
+          />
+          <h2>Tablet</h2>
+          <p>
+            Creatividad, productividad y entretenimiento en la palma de tu mano.
+            Nuestras tablets ofrecen una experiencia digital sin límites, con
+            diseño elegante y rendimiento excepcional.
+          </p>
+          <button>Comprar</button>
         </article>
-      </div>    
-    </section>
 
-  </main>
+        <article class="post">
+          <img
+            src="https://www.hindustantimes.com/ht-img/img/2023/09/20/1600x900/smart_TV_1695194703995_1695194727141.JPG"
+            alt="smart tv imagen"
+          />
+          <h2>SmartTV</h2>
+          <p>
+            Transforma tu sala de estar en un centro de entretenimiento
+            inteligente con nuestras Smart TVs. Disfruta de imágenes
+            impresionantes, sonido envolvente y acceso a una variedad de
+            contenidos con solo presionar un botón.
+          </p>
+          <button>Comprar</button>
+        </article>
+      </section>
 
-  <footer>
-    <span>© 2024 Casi todos los derechos reservados</span>
-  </footer>
+      <section class="blog-posts" id="ropa">
+        <article class="post">
+          <img
+            src="https://www.deportestrisport.com/uploads/photo/image/12974/gallery_A03103_1.JPG"
+            alt="camiseta nike imagen"
+          />
+          <h2>Camiseta Nike</h2>
+          <p>
+            Comodidad y estilo se unen en nuestra camiseta Nike. Diseñada para
+            acompañarte en cualquier actividad, esta camiseta ofrece libertad de
+            movimiento y un ajuste perfecto.
+          </p>
+          <button>Comprar</button>
+        </article>
+        <article class="post">
+          <img
+            src="https://lsco.scene7.com/is/image/lsco/501550078-alt1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,1&op_usm=1.25,0.6,8&wid=2000&hei=1800"
+            alt="pantalón levis imagen"
+          />
+          <h2>Pantalón Levis</h2>
+          <p>
+            Versatilidad y durabilidad definen nuestros pantalones Levis.
+            Confeccionados con los mejores materiales, estos pantalones te
+            brindarán un look moderno y elegante en cualquier ocasión.
+          </p>
+          <button>Comprar</button>
+        </article>
+        <article class="post">
+          <img
+            src="https://www.nakedcph.com/images/72175/product.jpg"
+            alt="suéter jordan imagen"
+          />
+          <h2>Suéter Jordan</h2>
+          <p>
+            Estilo urbano en su máxima expresión con nuestro suéter Jordan.
+            Inspirado en la icónica marca de baloncesto, este suéter combina
+            tecnología y diseño para mantenerte cómodo y a la moda en todo
+            momento.
+          </p>
+          <button>Comprar</button>
+        </article>
+      </section>
 
-  <script src="./main.js" type="module"></script>
-</body>
+      <section class="blog-posts" id="zapatos">
+        <article class="post">
+          <img
+            src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/374915/01/sv01/fnd/PNA/fmt/png/Tenis-Suede-Classic-XXI-Hombre"
+            alt="tennis puma imagen"
+          />
+          <h2>Tennis Puma</h2>
+          <p>
+            Estilo y rendimiento se fusionan en nuestros tennis Puma. Con un
+            diseño moderno y tecnología avanzada, estos tennis te ofrecen
+            comodidad y estilo en cada paso.
+          </p>
+          <button>Comprar</button>
+        </article>
+        <article class="post">
+          <img
+            src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_3.0/h_300,c_limit/27dc1357-86d0-4568-ac37-4b5d39fb7686/zoom-challenge-womens-pickleball-shoes-XcRDRs.png"
+            alt="tennis nike femeninos imagen"
+          />
+          <h2>Tennis Nike femeninos</h2>
+          <p>
+            Descubre la elegancia y el poder de nuestros tennis Nike femeninos.
+            Diseñados para la mujer moderna, estos tennis combinan estilo y
+            funcionalidad para brindarte un look impecable en cualquier ocasión.
+          </p>
+          <button>Comprar</button>
+        </article>
+        <article class="post">
+          <img
+            src="https://cariciastore.com/cdn/shop/products/44002-89.png?v=1658789868&width=533"
+            alt="zapatos truck imagen"
+          />
+          <h2>Zapatos Truck</h2>
+          <p>
+            Haz una declaración audaz con nuestros zapatos Truck. Con un diseño
+            único y materiales de alta calidad, estos zapatos son perfectos para
+            aquellos que buscan destacar y expresar su individualidad.
+          </p>
+          <button>Comprar</button>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>
+        &copy;
+        <script>
+          new Date().getFullYear();
+        </script>
+        Mi blog <span aria-hidden="true">| </span>Casi los derechos reservados.
+      </span>
+    </footer>
+  </body>
 </html>

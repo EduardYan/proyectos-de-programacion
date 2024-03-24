@@ -1,251 +1,130 @@
-:root {
-	--bg: hsl(246 44% 7%);
-	--border: hsl(280 10% 50% / 1);
-	--card: hsl(237 36% 10%);
-	--color: hsl(240 18% 80%);
-	--border-width: 2px;
-	--border-radius: 12px;
-	--gradient: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* * {
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'Geist Sans';
-  src: url('./fonts/geist-sans-latin-400-normal.ttf');
-}
-
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background-color: #eee;
-  font-family: 'Geist Sans', sans-serif;
-} */
-
-@font-face {
-  font-family: "Geist Sans";
-  /* src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype"); */
-  src: url('./fonts/geist-sans-latin-400-normal.ttf')
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
-@property --start {
-	syntax: '<number>';
-	inherits: true;
-	initial-value: 0;
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+
+  padding: 20px 0;
 }
 
-body {
-	background: var(--bg);
-	display: grid;
-	place-items: center;
-	min-height: 100vh;
-	font-family:  "Geist Sans", system-ui, sans-serif;
-	font-weight: 70;
-	color: var(--color);
+header h1 {
+  margin: 0;
+  font-size: 36px;
 }
 
-main {
-  max-width: 75%;
-  margin: 2rem auto;
-}
-
-main #title {
+header nav {
+  background-color: #333;
+  padding: 10px 0;
   text-align: center;
 }
 
-main section {
-  display: grid;
-  grid-template-columns: 25% 75%;
-
-}
-/* 
-.posts {
-	--spread: 60;
-	display: flex;
-	flex-wrap: wrap;
-  flex-direction: var(--direction);
-	gap: calc(var(--gap) * 1px);
-	margin: 0 auto;
-	justify-content: center;
-	place-items: center;
-	position: relative;
-	padding: 2rem;
-  touch-action: none;
-} */
-
-
-.posts {
-	--spread: 60;
-	margin: 0 auto;
-	position: relative;
-	padding: 2rem;
-  touch-action: none;
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.posts article {
-	--active: 0.15;
-	--start: 0;
-	height: 100%;
-	background: var(--card);
-	padding: 2rem;
-	aspect-ratio: 330 / 400;
-	border-radius: var(--border-radius);
-	min-width: 280px;
-	max-width: 280px;
-	display: flex;
-	flex-direction: column;
-	gap: 0.25rem;
-	position: relative;
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.posts article:is(:hover, :focus-visible) {
-  z-index: 2;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.posts .glows {
-	pointer-events: none;
-	position: absolute;
-	inset: 0;
-	filter: blur(calc(var(--blur) * 1px));
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 
-.posts .glows::after,
-.posts .glows::before {
-  --alpha: 0;
-  content: "";
-  background: var(--gradient);
-  background-attachment: fixed;
-  position: absolute;
-	inset: -5px;
-  border: 10px solid transparent;
-  border-radius: var(--border-radius);
-  mask:
-  	linear-gradient(#0000, #0000),
-  	conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg), #000 0deg, #fff, #0000 calc(var(--spread) * 1deg));
-  mask-composite: intersect;
-  mask-clip: padding-box, border-box;
-  opacity: var(--active);
-  transition: opacity 1s;
+main {
+  max-width: 50%;
+  margin: 150px auto 0 auto;
 }
 
-.posts article::before {
-	position: absolute;
-	inset: 0;
-	border: var(--border-width) solid transparent;
-	content: "";
-	border-radius: var(--border-radius);
-	pointer-events: none;
-	background: var(--border);
-  background-attachment: fixed;
-  border-radius: var(--border-radius);
-  mask:
-  	linear-gradient(#0000, #0000),
-  	conic-gradient(
-  		from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
-  		hsl(0 0% 100% / 0.15) 0deg,
-  		white,
-  		hsl(0 0% 100% / 0.15) calc(var(--spread) * 2.5deg));
-  mask-clip: padding-box, border-box;
-  mask-composite: intersect;
-  opacity: var(--active);
-  transition: opacity 1s;
+.blog-posts {
+  margin: 2rem auto;
+  padding: 20px 0px;
 }
 
-.posts article::after {
-	--bg-size: 100%;
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  background: var(--gradient);
-  background-attachment: fixed;
-  border-radius: var(--border-radius);
-  opacity: var(--active, 0);
-  transition: opacity 1s;
-  --alpha: 0;
-  inset: 0;
-  border: var(--border-width) solid transparent;
-  mask:
-  	linear-gradient(#0000, #0000),
-  	conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg), #0000 0deg, #fff, #0000 calc(var(--spread) * 0.5deg));
-  filter: brightness(1.5);
-  mask-clip: padding-box, border-box;
-  mask-composite: intersect;
+.post {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: 0 auto 20px auto;
 }
 
-.posts .badge {
-	border: 2px solid var(--border);
-	align-self: start;
-	border-radius: 100px;
-	padding: 0.5rem 0.7rem;
-	font-size: 0.675rem;
-	display: flex;
-	align-items: center;
-	gap: 0.25rem;
-	font-weight: 50;
+.post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
 }
 
-.posts a {
-	color: var(--color);
-	text-decoration: none;
-	opacity: 0.5;
-	display: inline-block;
-	align-self: start;
-	transition: opacity 0.2s;
+.post h2 {
+  color: #333;
 }
 
-.posts a:is(:hover, :focus-visible) {
-	opacity: 1;
+.post p {
+  color: #666;
 }
 
-.posts article h2 {
-	margin: 0;
-	padding: 1rem 0;
-	font-weight: 100;
-	font-size: 1.5rem;
+.post button {
+  padding: 10px;
+  width: 200px;
+  border-width: 0;
+  border-radius: 8px;
+  background-color: #ddd;
 }
 
-.posts .header {
-	position: relative;
-	flex: 1;
-	display: flex;
-	align-items: center;
+.post button:hover {
+  cursor: pointer;
 }
 
-.posts .header svg {
-	--count: 4;
-	width: 106px;
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 200px;
+  width: 100%;
 }
 
-.posts .header svg:nth-of-type(2),
-.posts .header svg:nth-of-type(3),
-.posts .header svg:nth-of-type(4) {
-	position: absolute;
-	z-index: calc(var(--count) - var(--index));
-	translate: calc(var(--index) * 30%) 0;
-	opacity: calc(var(--count) / (2 * (var(--index) * 10)));
+@media (width < 1000px) {
+  header {
+    padding: 10px 0;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    max-width: 90%;
+  }
 }
 
-.posts .header svg:nth-of-type(2) {
-	--index: 1;
-}
-
-.posts .header svg:nth-of-type(3) {
-	--index: 2;
-}
-
-.posts.header svg:nth-of-type(4) {
-	--index: 3;
-}
-
-.posts .badge svg {
-	width: 16px;
-}
-
-.posts .dg.ac {
-  z-index: 99999 !important;
+@media (width < 800px) {
+  .post {
+    width: 90%;
+  }
 }
