@@ -1,0 +1,13 @@
+{
+  "name": "programming-projects",
+  "version": "1.0.0",
+  "description": "Programming projects",
+  "author": "EduardYan",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "17.1.0"
+  },
+  "dependencies": {
+    "@fontsource/geist-sans": "^5.0.2"
+  }
+}
