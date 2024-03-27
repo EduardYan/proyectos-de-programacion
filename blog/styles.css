@@ -2,23 +2,24 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #ddd;
+  color: #fff;
 }
 
 header {
   background-color: #333;
-  color: white;
   text-align: center;
-
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
-  text-align: center;
   z-index: 1000;
-
   padding: 20px 0;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header h1 {
@@ -36,15 +37,14 @@ header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-header nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row;
 }
 
 header nav ul li a {
-  color: white;
   text-decoration: none;
   font-size: 18px;
 }
@@ -64,7 +64,7 @@ main {
 }
 
 .post {
-  background-color: white;
+  background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -82,18 +82,34 @@ main {
 
 .post h2 {
   color: #333;
+  margin-bottom: 0;
 }
 
 .post p {
-  color: #666;
+  color: #555;
+  font-size: 18px;
 }
 
 .post button {
-  padding: 10px;
-  width: 200px;
-  border-width: 0;
-  border-radius: 8px;
-  background-color: #ddd;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: #000;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.post button:hover {
+  color: #000;
+  transform: translate(-0.25rem, -0.25rem);
+  background: #ff90e8;
+  box-shadow: 0.25rem 0.25rem #000;
+}
+
+.post button:active {
+  transform: translate(0);
+  box-shadow: none;
 }
 
 .post button:hover {
@@ -102,7 +118,6 @@ main {
 
 footer {
   background-color: #333;
-  color: white;
   padding: 20px 0;
   text-align: center;
   margin-top: 200px;
@@ -110,14 +125,6 @@ footer {
 }
 
 @media (width < 1000px) {
-  header {
-    padding: 10px 0;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
   main {
     max-width: 90%;
   }
