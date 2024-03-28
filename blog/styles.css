@@ -20,11 +20,18 @@ header {
 header a {
   text-decoration: none;
   color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header h1 {
+header a h1 {
   margin: 0;
   font-size: 36px;
+}
+
+header a img {
+  width: 60px;
 }
 
 header nav {
