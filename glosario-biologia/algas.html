@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algas</title>
 
     <style>
@@ -89,12 +90,12 @@
         background: hsl(248, 53%, 58%);
         padding: 16px 32px;
         color: white;
+        font-size: 1rem;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        font-size: 1rem;
         transform: translateY(-4px);
         transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
       }
@@ -125,6 +126,21 @@
 
       .pushable:focus:not(:focus-visible) {
         outline: none;
+      }
+
+      @media (width < 950px) {
+        main article {
+          flex-direction: column;
+        }
+
+        main article div img {
+          width: 100%;
+        }
+
+        .pushable {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
       }
     </style>
   </head>
@@ -162,7 +178,7 @@
         </div>
       </article>
 
-      <a class="pushable" href="./Menuglosario.html">
+      <a class="pushable" href="./index.html">
         <span class="shadow"></span>
         <span class="edge"></span>
         <span class="front"> Regresar </span>
