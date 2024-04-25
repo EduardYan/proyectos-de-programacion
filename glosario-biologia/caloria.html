@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caloría</title>
 
     <style>
@@ -125,6 +126,21 @@
 
       .pushable:focus:not(:focus-visible) {
         outline: none;
+      }
+
+      @media (width < 950px) {
+        main article {
+          flex-direction: column;
+        }
+
+        main article div img {
+          width: 100%;
+        }
+
+        .pushable {
+          margin: 0 auto;
+          margin-top: 30px;
+        }
       }
     </style>
   </head>
