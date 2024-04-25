@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bacterias</title>
+
+    <style>
+      body {
+        font-size: 1.4rem;
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: "#ffffff";
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto 4rem auto;
+      }
+
+      main article {
+        display: flex;
+        gap: 30px;
+      }
+
+      main div p {
+        margin-top: 0;
+      }
+
+      main div img {
+        width: 400px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .pushable {
+        display: block;
+        width: 200px;
+        position: relative;
+        background: transparent;
+        text-decoration: none;
+        text-align: center;
+        padding: 0px;
+        border: none;
+        cursor: pointer;
+        outline-offset: 4px;
+        outline-color: deeppink;
+        transition: filter 250ms;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: hsl(226, 25%, 69%);
+        border-radius: 8px;
+        filter: blur(2px);
+        will-change: transform;
+        transform: translateY(2px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .edge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        background: linear-gradient(
+          to right,
+          hsl(248, 39%, 39%) 0%,
+          hsl(248, 39%, 49%) 8%,
+          hsl(248, 39%, 39%) 92%,
+          hsl(248, 39%, 29%) 100%
+        );
+      }
+
+      .front {
+        display: block;
+        text-decoration: none;
+        position: relative;
+        border-radius: 8px;
+        background: hsl(248, 53%, 58%);
+        padding: 16px 32px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        transform: translateY(-4px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .pushable:hover {
+        filter: brightness(110%);
+      }
+
+      .pushable:hover .front {
+        transform: translateY(-6px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      .pushable:active .front {
+        transform: translateY(-2px);
+        transition: transform 34ms;
+      }
+
+      .pushable:hover .shadow {
+        transform: translateY(4px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      .pushable:active .shadow {
+        transform: translateY(1px);
+        transition: transform 34ms;
+      }
+
+      .pushable:focus:not(:focus-visible) {
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body tex="#ffffff" vlink="#6366f1" alink="#ffccff" link="#ff0000">
+    <h1>Bacterias</h1>
+
+    <main>
+      <article>
+        <div>
+          <p>
+            Las bacterias son microorganismos procariotas que pueden encontrarse
+            en una amplia variedad de formas y tamaños. Se dividen en dos
+            dominios taxonómicos: Bacteria y Archaea, ambos pertenecientes al
+            superreino Prokaryota. Estos organismos son los seres vivos más
+            primitivos y abundantes del planeta Tierra, capaces de adaptarse a
+            una amplia gama de condiciones y hábitats, incluso pueden sobrevivir
+            en condiciones hostiles como el espacio exterior.
+          </p>
+
+          <p>
+            Las bacterias se reproducen rápidamente y mediante procedimientos
+            asexuales, que consisten en la replicación de la célula progenitora
+            en dos exactamente iguales a ella (fisión binaria). Se estima que,
+            en un ambiente propicio, una bacteria es capaz de dividirse en
+            apenas 15-20 o 20-30 minutos, dependiendo de la especie.
+          </p>
+        </div>
+
+        <div>
+          <img src="./imagenes/bacterias-1.jpg" alt="imagen de bacterias 1" />
+          <img src="./imagenes/bacterias-2.png" alt="imagen de bacterias 2" />
+        </div>
+      </article>
+
+      <a class="pushable" href="./Menuglosario.html">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front"> Regresar </span>
+      </a>
+    </main>
+  </body>
+</html>
